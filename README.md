@@ -6,13 +6,8 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
-> Blueprint to help support Patient Report form.
+> Demo contact form blueprint
 
-## Test
-
-```
-npm test
-```
 
 ## <a name="license"></a>License
 
