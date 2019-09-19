@@ -6,7 +6,7 @@
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 
-> Demo contact form blueprint
+> Demo contact form blueprint for ESS
 
 
 ## <a name="license"></a>License
