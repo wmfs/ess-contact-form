@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/wmfs/ess-contact-form/compare/v1.1.0...v1.2.0) (2019-09-19)
+
+
+### ✨ Features
+
+* update readme ([c47ee50](https://github.com/wmfs/ess-contact-form/commit/c47ee50))
+
 # [1.1.0](https://github.com/wmfs/ess-contact-form/compare/v1.0.0...v1.1.0) (2019-09-19)
 
 
