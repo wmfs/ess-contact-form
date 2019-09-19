@@ -1,0 +1,8 @@
+{
+  "label": "Contact",
+  "description": "Contact",
+  "style": {
+    "icon": "incidents",
+    "backgroundColor": "#008800"
+  }
+}

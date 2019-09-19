@@ -1,0 +1,34 @@
+{
+  "title": "contact-form",
+  "description": "Holds casualty report form data",
+  "type": "object",
+  "required": [
+    "contacteeName"
+  ],
+  "properties": {
+    "contacteeName": {
+      "type": "string"
+    },
+    "orgName": {
+      "type": "string"
+    },
+    "emailAddress": {
+      "type": "string"
+    },
+    "mobileNumber": {
+      "type": "string"
+    },
+    "consentRequest": {
+      "type": "string"
+    },
+    "marketing": {
+      "type": "string"
+    },
+    "rating": {
+      "type": "string"
+    },
+    "additionalInfo": {
+      "type": "string"
+    }
+  }
+}

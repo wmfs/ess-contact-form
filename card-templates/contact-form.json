@@ -1,0 +1,144 @@
+{
+  "templateMeta": {
+    "name": "contact-form",
+    "title": "Contact Form",
+    "category": "contact"
+  },
+  "type": "AdaptiveCard",
+  "body": [
+    {
+      "type": "Jumbotron",
+      "title": "Contact Form",
+      "backgroundImage": "wmfs/prf-background.jpg",
+      "wash": "black"
+
+    },
+    {
+      "type": "Container",
+      "id": "details",
+      "title": "Your details",
+      "items": [
+        {
+          "type": "TextBlock",
+          "text": "Please provide some contact details",
+          "wrap": true,
+          "size": "medium",
+          "weight": "lighter"
+        },
+        {
+          "type": "Input.Text",
+          "id": "contacteeName",
+          "title": "Your name",
+          "spacing": "medium",
+          "icon": "face",
+          "validation": {
+            "required": true
+          }
+        },
+        {
+          "type": "Input.Text",
+          "id": "orgName",
+          "title": "Organisation / Company",
+          "spacing": "medium",
+          "icon": "store"
+        },
+        {
+          "type": "Input.Email",
+          "id": "emailAddress",
+          "title": "Email address"
+        },
+        {
+          "type": "Input.TelephoneNumber",
+          "id": "mobileNumber",
+          "title": "Contact telephone number"
+        },
+        {
+          "id": "consentRequest",
+          "title": "Do you consent to West Midlands Fire Service holding these details, for the purposes of contacting you or sending further Information about of ICT Services?",
+          "type": "Input.ChoiceSet",
+          "spacing": "medium",
+          "icon": "question_answer",
+          "choices": [
+            {
+              "title": "Yes",
+              "value": "YES"
+            },
+            {
+              "title": "No",
+              "value": "NO"
+            }
+          ],
+          "style": "expanded"
+        },
+        {
+          "type": "Input.ChoiceSet",
+          "title": "What areas of Tymly interest you?",
+          "id": "marketing",
+          "spacing": "medium",
+          "icon": "search",
+          "choices": [
+            {
+              "title": "Tymly",
+              "value": "TYMLY"
+            },
+            {
+              "title": "Tymly - Fire Safety",
+              "value": "FIRE_SAFETY"
+            },
+            {
+              "title": "Tymly - Safe and Well",
+              "value": "SAFE_WELL"
+            },
+            {
+              "title": "Other",
+              "value": "OTHER"
+            }
+          ],
+          "style": "expanded",
+          "isMultiSelect": true
+        },
+        {
+          "type": "Container",
+          "id": "rating",
+          "items": [
+            {
+              "type": "TextBlock",
+              "text": "How would you rate the information you received today in terms of relevance and usefulness? 1 low - 5 high",
+              "spacing": "large",
+              "separator": true
+            },
+            {
+              "id": "slider",
+              "type": "Input.Slider",
+              "spacing": "medium",
+              "min": 1,
+              "max": 5,
+              "step": 1,
+              "value": 0
+            }
+          ]
+        },
+        {
+          "type": "Input.Text",
+          "id": "additionalInfo",
+          "title": "Do you have any additional comments or questions?",
+          "icon": "chat",
+          "spacing": "medium",
+          "editor": true
+        }
+      ]
+    }
+  ],
+  "actions": [
+    {
+      "type": "Action.Cancel",
+      "title": "Cancel"
+    },
+    {
+      "type": "Action.Submit",
+      "title": "Submit"
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json",
+  "version": "1.0"
+}
