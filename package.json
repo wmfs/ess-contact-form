@@ -1,9 +1,9 @@
 {
-  "name": "@wmfs/ess-contact-form-blueprint",
+  "name": "@wmfs/ess-contact-form",
   "version": "0.0.0-semantically-released",
   "description": "Simple contact form blueprint",
   "author": "West Midlands Fire Service",
-  "homepage": "https://github.com/wmfs/ess-ontact-form-blueprint#readme",
+  "homepage": "https://github.com/wmfs/ess-contact-form#readme",
   "keywords": [
     "tymly",
     "blueprint",
@@ -14,10 +14,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/wmfs/ess-contact-form-blueprint.git"
+    "url": "https://github.com/wmfs/ess-contact-form.git"
   },
   "bugs": {
-    "url": "https://github.com/wmfs/ess-contact-form-blueprint/issues"
+    "url": "https://github.com/wmfs/ess-contact-form/issues"
   },
   "dependencies": {},
   "devDependencies": {
