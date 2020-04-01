@@ -1,7 +1,3 @@
-# Javascript Node CircleCI 2.0 configuration file
-#
-# Check https://circleci.com/docs/2.0/language-javascript/ for more details
-#
 version: 2
 jobs:
   release:
@@ -21,10 +17,12 @@ jobs:
     - run:
         name: release
         command: npx semantic-release
-
-
 workflows:
   version: 2
-  test_and_release:
+  release:
     jobs:
-    - release
+    - build:
+        context: tymly_global
+        filters:
+          branches:
+            only: master
