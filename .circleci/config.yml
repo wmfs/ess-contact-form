@@ -1,28 +1,54 @@
 version: 2
 jobs:
-  release:
+  lint:
     docker:
-    # use node:lts
-    - image: cimg/node:lts
-      environment:
-        TZ: "Europe/London"
+      - image: cimg/node:lts
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
     working_directory: ~/repo
     steps:
-    - checkout
-    - run:
-        name: install
-        command: |
-          npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
-          npm install
-    - run:
-        name: release
-        command: npx semantic-release
+      - checkout
+      - run:
+          name: install standard
+          command: npm install standard
+      - run:
+          name: lint
+          command: npm run lint
+  release:
+    docker:
+      - image: cimg/node:lts
+        auth:
+          username: $DOCKERHUB_USERNAME
+          password: $DOCKERHUB_PASSWORD
+        environment:
+          TZ: "Europe/London"
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+          name: install
+          command: |
+            npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
+            npm install
+      - run:
+          name: release
+          command: |
+            chmod +x version_blueprint
+            npx semantic-release
 workflows:
   version: 2
-  release:
+  test_and_release:
     jobs:
-    - build:
-        context: tymly_global
+    - lint:
+        context:
+          - docker-hub-creds
+    - release:
+        context:
+          - docker-hub-creds
+          - tymly_global
+        requires:
+        - lint
         filters:
           branches:
             only: master
