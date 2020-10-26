@@ -46,7 +46,7 @@ workflows:
     - release:
         context:
           - docker-hub-creds
-          - tymly_global
+          - build-env-vars
         requires:
         - lint
         filters:
