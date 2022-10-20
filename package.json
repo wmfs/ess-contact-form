@@ -44,6 +44,9 @@
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
+    },
+    "tymly": {
+      "sync": false
     }
   },
   "publishConfig": {
