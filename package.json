@@ -32,7 +32,7 @@
     "standard": "17.1.0",
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
-    "@wmfs/tymly": "1.261.0",
+    "@wmfs/tymly": "1.262.0",
     "@wmfs/tymly-pg-plugin": "1.290.0"
   },
   "scripts": {
