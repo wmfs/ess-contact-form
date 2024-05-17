@@ -33,7 +33,7 @@
     "@semantic-release/changelog": "6.0.3",
     "@semantic-release/git": "10.0.1",
     "@wmfs/tymly": "1.264.0",
-    "@wmfs/tymly-pg-plugin": "1.291.0"
+    "@wmfs/tymly-pg-plugin": "1.292.0"
   },
   "scripts": {
     "lint": "standard",
